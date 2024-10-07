@@ -8,9 +8,11 @@
             position: relative;
             width: 100%;
             height: 0;
-            padding-bottom: 75%; /* Proporción de 4:3 para pantallas móviles */
+            padding-bottom: 150%; /* Proporción de 2:3 (más altura que ancho) */
             overflow: hidden;
         }
+
+        /* El iframe ocupa todo el contenedor y se ajusta automáticamente */
         .responsive-iframe iframe {
             position: absolute;
             top: 0;
@@ -18,6 +20,13 @@
             width: 100%;
             height: 100%;
             border: 0;
+        }
+
+        /* Aumenta el tamaño del iframe para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .responsive-iframe {
+                padding-bottom: 180%; /* Más altura para pantallas pequeñas */
+            }
         }
     </style>
 </head>
@@ -27,3 +36,4 @@
     </div>
 </body>
 </html>
+
