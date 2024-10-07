@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilo para centrar el iframe y hacerlo responsivo */
+        .responsive-iframe {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 150%; /* Proporción de 2:3 (más altura que ancho) */
+            overflow: hidden;
+        }
+
+        /* El iframe ocupa todo el contenedor y se ajusta automáticamente */
+        .responsive-iframe iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Aumenta el tamaño del iframe para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .responsive-iframe {
+                padding-bottom: 180%; /* Más altura para pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="responsive-iframe">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIBgqZPslcPb8tsWwP8vjVemtsR8Kh62ZvosTZYOw5FBLUWKNSt6sbSXTwueN0Sg/pubhtml?widget=true&amp;headers=false"></iframe>
+    </div>
+</body>
+</html>
